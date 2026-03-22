@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,98 +40,67 @@ class FacebookApp extends StatelessWidget {
 
         icon: Icon(Icons.plus_one_rounded, color: Colors.white),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Container(
-              height: 300,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Color(0xFF5B7A8C),
-
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-              ),
-              child: Center(
-                child: Text(
-                  "c4a.shop",
-                  style: TextStyle(fontSize: 23, color: Colors.white),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Text(
+            "Scania",
+            style: TextStyle(
+              fontSize: 90,
+              color: Colors.blue[800],
+              fontFamily: "Italianno",
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.all(10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 20,
+              children: [
+                Container(
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: BoxBorder.all(color: Colors.blue, width: 2),
+                  ),
+                  child: SvgPicture.asset(
+                    "assets/img/facebook.svg",
+                    color: Colors.blue,
+                    height: 40,
+                  ),
                 ),
-              ),
-            ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                    margin: EdgeInsets.all(20),
-                    width: 150,
-                    height: 90,
-                    decoration: BoxDecoration(
-                      color: Color(0xFF5B7A8C),
-
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    child: Center(
-                      child: Text(
-                        "c4a.shop",
-                        style: TextStyle(fontSize: 23, color: Colors.white),
-                      ),
-                    ),
+                Container(
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: BoxBorder.all(color: Colors.blue, width: 2),
                   ),
-                  Container(
-                    margin: EdgeInsets.all(20),
-                    width: 150,
-                    height: 90,
-                    decoration: BoxDecoration(
-                      color: Color(0xFF5B7A8C),
-
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Center(
-                      child: Text(
-                        "c4a.shop",
-                        style: TextStyle(fontSize: 23, color: Colors.white),
-                      ),
-                    ),
+                  child: SvgPicture.asset(
+                    "assets/img/instagram.svg",
+                    color: Colors.blue,
+                    height: 40,
                   ),
-                  Container(
-                    margin: EdgeInsets.all(20),
-                    width: 150,
-                    height: 90,
-                    decoration: BoxDecoration(
-                      color: Color(0xFF5B7A8C),
-
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Center(
-                      child: Text(
-                        "c4a.shop",
-                        style: TextStyle(fontSize: 23, color: Colors.white),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              height: 300,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Color(0xFF5B7A8C),
-
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-              ),
-              child: Center(
-                child: Text(
-                  "c4a.shop",
-                  style: TextStyle(fontSize: 23, color: Colors.white),
                 ),
-              ),
+
+                Container(
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: BoxBorder.all(color: Colors.blue, width: 2),
+                  ),
+                  child: SvgPicture.asset(
+                    "assets/img/twitter.svg",
+                    color: Colors.blue,
+                    height: 40,
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
